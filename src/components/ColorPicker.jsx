@@ -11,7 +11,7 @@ function ColorPicker(){
     
     
 
-      <Image src="../assets/images/pic.jpg" roundedCircle />
+      
     
     
 

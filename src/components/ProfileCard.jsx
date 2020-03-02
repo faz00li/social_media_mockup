@@ -21,7 +21,7 @@ function ProfileCard() {
             <div className="description col-8">
               <blockquote className="blockquote mb-0">
                 <h5 className="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vitae id tempora dolores temporibus fugiat incidunt doloribus atque consequatur deserunt, hic, voluptatum cumque laudantium ducimus corporis suscipit earum et libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</h5>
-                <footer class="blockquote-footer">Boogie Nights<cite title="Source Title">- Source Title</cite></footer>
+                <footer className="blockquote-footer">Boogie Nights<cite title="Source Title">- Source Title</cite></footer>
               </blockquote>
             </div>
             <div className="col-4"> 
