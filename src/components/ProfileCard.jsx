@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import pic from '../assets/images/pic.jpg';
+import {Link} from 'react-router-dom';
 
 function ProfileCard() {
   
@@ -33,7 +33,11 @@ function ProfileCard() {
         </div>
        
         <div className="card-body">
-          <div className="container d-flex justify-content-center"><a href="#" className="btn btn-primary mx-2">Tweets</a><a href="#" className="btn btn-primary mx-2">Following</a><a href="#" className="btn btn-primary mx-2">Followers</a></div>
+          <div className="container d-flex justify-content-center">
+            <Link to = '/new' className="btn btn-primary mx-2">Post</Link>
+            <Link to = '/' className="btn btn-primary mx-2">Tweets</Link>
+            <a href="#" className="btn btn-primary mx-2">Following</a>
+            <a href="#" className="btn btn-primary mx-2">Followers</a></div>
         </div>
         
       </div>
