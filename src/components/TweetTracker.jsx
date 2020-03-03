@@ -1,56 +1,24 @@
 import React from 'react';
 import Tweet from './Tweet';
+import PropTypes from 'Prop-Types';
 
-var masterTweetList = [
-  {
-    name: "Eddie",
-    tweet: "1 tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident! "
-  },
-  {
-    name: "Bobby",
-    tweet: "2 tweet tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident!"
-  },
-  {
-    name: "Jimmy",
-    tweet: "3 tweet tweet tweeet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident!"
-  },
-  {
-    name: "Tommy",
-    tweet: "1 tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident! "
-  },
-  {
-    name: "Jerry",
-    tweet: "2 tweet tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident!"
-  },
-  {
-    name: "Gary",
-    tweet: "3 tweet tweet tweeet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident!"
-  },
-  {
-    name: "Freddie",
-    tweet: "1 tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident! "
-  },
-  {
-    name: "Johnny",
-    tweet: "2 tweet tweet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident!"
-  },
-  {
-    name: "Louie",
-    tweet: "3 tweet tweet tweeet Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vero nihil eveniet dolorem odit, ea nisi id incidunt iure repellat suscipit, ut esse in magnam fugit exercitationem dolor. Sed, provident!"
-  }
-];
 
-function TweetTracker(){
+function TweetTracker(props){
+  console.log(props.tweetList);
   return (
     <div>
     <hr/>
-    {masterTweetList.map((tweet, index) =>
+    {props.tweetList.map((tweet) =>
       <Tweet name={tweet.name}
-        tweet={tweet.tweet}
-        key={index} />
+        tweet={tweet.tweetMSG}
+        key={tweet.id} />
     )}
     </div> 
   );
+}
+
+TweetTracker.propTypes = {
+  tweetList: PropTypes.array
 }
 
 export default TweetTracker;

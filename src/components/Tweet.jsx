@@ -5,15 +5,15 @@ function Tweet(props){
   return (
     <div>
       <h3>{props.name}</h3>
-      <p><em>{props.tweet}</em></p>
+      <p><em>{props.tweetMSG}</em></p>
       <hr/>
     </div>
   );
 }
 
 Tweet.propTypes = {
-  name: PropTypes.string.isRequired,
-  tweet: PropTypes.string.isRequired
+  name: PropTypes.string,
+  tweetMSG: PropTypes.string
 };
 
 export default Tweet;

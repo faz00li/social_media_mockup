@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from  'prop-types';
+import { v4 } from 'uuid';
 
 function TweetCreator(props) {
   let _name = null;
@@ -8,7 +9,7 @@ function TweetCreator(props) {
   function handlePostTweet(event) {
     event.preventDefault();
     console.log(_name.value, _tweet.value);
-    props.onNewTweetCreation({name: _name.value, tweet: _tweet.value});
+    props.onNewTweetCreation({name: _name.value, tweet: _tweet.value, id: v4()});
     _name.value = '';
     _tweet.value = '';
   }
